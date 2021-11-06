@@ -5,8 +5,7 @@ import React from "react";
 class LogViewer extends HTMLElement {
     connectedCallback() {
       this.mountPoint = document.createElement('div');
-      const shadowRoot = this.attachShadow({ mode: 'open' });
-      shadowRoot.appendChild(this.mountPoint);
+      this.appendChild(this.mountPoint);
 
       const url = this.getAttribute('url');
 
